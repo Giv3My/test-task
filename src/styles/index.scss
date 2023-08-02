@@ -7,10 +7,34 @@
   font-family: 'TTHoves', sans-serif;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 a {
+  text-decoration: none;
   color: #000;
 }
 
+input,
+textarea {
+  border: none;
+
+  &:focus-visible {
+    outline: none;
+  }
+}
+
 button {
+  border: none;
+  background-color: transparent;
   cursor: pointer;
+
+  &:focus-visible {
+    outline: none;
+  }
+}
+
+ul {
+  list-style: none;
 }

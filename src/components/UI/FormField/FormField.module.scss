@@ -1,0 +1,13 @@
+.field {
+  padding: 14px 10px 14px 21px;
+  width: 391px;
+  font-size: 14px;
+  font-weight: 400;
+  letter-spacing: 0.56px;
+  color: #8d8d8d;
+  background-color: #f3f3f3;
+
+  &.error {
+    outline: 1px solid #c30000;
+  }
+}
