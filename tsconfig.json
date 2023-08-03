@@ -7,9 +7,9 @@
       "DOM",
       "DOM.Iterable"
     ],
+    "outDir": "./dist",
     "module": "ESNext",
     "skipLibCheck": true,
-    /* Bundler mode */
     "moduleResolution": "Node",
     "resolveJsonModule": true,
     "allowSyntheticDefaultImports": true,
@@ -21,6 +21,7 @@
     "noUnusedLocals": true,
     "noUnusedParameters": true,
     "noFallthroughCasesInSwitch": true,
+    "allowJs": true,
     "baseUrl": ".",
     "paths": {
       "@/*": [
@@ -39,6 +40,9 @@
   },
   "include": [
     "src"
+  ],
+  "exclude": [
+    "./dist",
   ],
   "references": [
     {

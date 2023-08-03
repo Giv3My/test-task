@@ -1,0 +1,27 @@
+.connect-section {
+  margin-top: 120px;
+
+  & > div {
+    margin-top: 22px;
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .connect-section {
+    & > div {
+      justify-content: center;
+
+      & > div {
+        display: none;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .connect-section {
+    margin-top: 60px;
+  }
+}
