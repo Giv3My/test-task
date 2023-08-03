@@ -10,18 +10,17 @@ export const Footer: React.FC = () => {
   const accordion1 = React.useRef<HTMLDivElement>(null);
   const accordion2 = React.useRef<HTMLDivElement>(null);
 
-  const toggleAccordion =
-    (ref: React.RefObject<HTMLDivElement>) => (e: React.MouseEvent<HTMLDivElement>) => {
-      if (!ref.current) {
-        return;
-      }
+  const toggleAccordion = (ref: React.RefObject<HTMLDivElement>) => () => {
+    if (!ref.current) {
+      return;
+    }
 
-      if (!ref.current.classList.contains(styles.active)) {
-        ref.current.classList.add(styles.active);
-      } else {
-        ref.current.classList.remove(styles.active);
-      }
-    };
+    if (!ref.current.classList.contains(styles.active)) {
+      ref.current.classList.add(styles.active);
+    } else {
+      ref.current.classList.remove(styles.active);
+    }
+  };
 
   return (
     <footer className={styles.footer}>
