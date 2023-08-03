@@ -79,3 +79,100 @@
     }
   }
 }
+
+@media screen and (max-width: 1140px) {
+  .promo-section {
+    .promo-left {
+      .promo-actions {
+        margin-top: 50px;
+
+        .promo-pages {
+          margin-top: 50px;
+        }
+      }
+    }
+
+    .promo-img {
+      img {
+        width: 513px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 870px) {
+  .promo-section {
+    flex-direction: column-reverse;
+    position: relative;
+
+    .promo-left {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      .promo-title {
+        position: absolute;
+        top: 0;
+      }
+
+      .promo-actions {
+        margin-top: 0;
+        display: flex;
+        flex-direction: column;
+
+        .actions-buttons {
+          margin-top: 30px;
+          gap: 40px;
+          order: 1;
+        }
+
+        .promo-pages {
+          margin-top: 30px;
+          justify-content: space-between;
+          gap: 0;
+        }
+      }
+    }
+
+    .promo-img {
+      margin-top: 150px;
+
+      img {
+        width: 513px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 570px) {
+  .promo-section {
+    .promo-left {
+      .promo-title {
+        .title {
+          font-size: 52px;
+        }
+      }
+    }
+
+    .promo-img {
+      margin-top: 120px;
+      display: flex;
+      justify-content: center;
+
+      img {
+        width: 95%;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 570px) {
+  .promo-section {
+    .promo-img {
+      .img-button {
+        width: 180px;
+        height: 60px;
+      }
+    }
+  }
+}

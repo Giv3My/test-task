@@ -6,6 +6,7 @@
   align-items: center;
   gap: 15px;
   background-color: #fff;
+  transition: all 0.3s ease;
 
   p {
     font-size: 12px;
@@ -14,5 +15,22 @@
     letter-spacing: 2.4px;
     color: #333;
     text-transform: uppercase;
+  }
+
+  &.animate {
+    span {
+      transition: all 0.3s ease;
+    }
+
+    &:hover {
+      overflow: hidden;
+      gap: 0;
+
+      span {
+        opacity: 0;
+        transform: translateX(60px);
+        transition: all 0.3s ease;
+      }
+    }
   }
 }

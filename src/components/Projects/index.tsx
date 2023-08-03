@@ -13,7 +13,7 @@ export const Projects: React.FC = () => {
       <div className={styles.projects}>
         {projectImages.map((img, index) => (
           <div key={index} className={styles.project}>
-            <img src={img} alt={`project_${index}`} />
+            <img src={img} alt={`project_${index + 1}`} />
             {index === 0 && (
               <div className={styles.details}>
                 <div className={styles['details-wrapper']}>
@@ -21,6 +21,7 @@ export const Projects: React.FC = () => {
                   <Button
                     className={styles['details-button']}
                     icon={<Arrow fill="#fff" />}
+                    animate={false}
                   >
                     <p>Подробнее</p>
                   </Button>

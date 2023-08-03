@@ -4,15 +4,36 @@ import { menuItems, contacts, socials } from './data';
 
 import logo from '@/assets/images/logo.png';
 import styles from './Footer.module.scss';
+import clsx from 'clsx';
 
 export const Footer: React.FC = () => {
+  const accordion1 = React.useRef<HTMLDivElement>(null);
+  const accordion2 = React.useRef<HTMLDivElement>(null);
+
+  const toggleAccordion =
+    (ref: React.RefObject<HTMLDivElement>) => (e: React.MouseEvent<HTMLDivElement>) => {
+      if (!ref.current) {
+        return;
+      }
+
+      if (!ref.current.classList.contains(styles.active)) {
+        ref.current.classList.add(styles.active);
+      } else {
+        ref.current.classList.remove(styles.active);
+      }
+    };
+
   return (
     <footer className={styles.footer}>
       <div className={styles['footer-wrapper']}>
         <div className={styles.logo}>
           <img src={logo} alt="logo" />
         </div>
-        <div className={styles.info}>
+        <div
+          ref={accordion1}
+          className={clsx(styles.info)}
+          onClick={toggleAccordion(accordion1)}
+        >
           <h5 className={styles.title}>Информация</h5>
           <ul className={styles.list}>
             {menuItems.map((menuItem, index) => (
@@ -22,7 +43,11 @@ export const Footer: React.FC = () => {
             ))}
           </ul>
         </div>
-        <div className={styles.contacts}>
+        <div
+          ref={accordion2}
+          className={clsx(styles.contacts)}
+          onClick={toggleAccordion(accordion2)}
+        >
           <h5 className={styles.title}>Контакты</h5>
           <ul className={styles.list}>
             {contacts.map((contact, index) => (

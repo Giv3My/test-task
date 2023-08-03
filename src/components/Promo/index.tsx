@@ -17,8 +17,16 @@ export const Promo: React.FC = () => {
         </div>
         <div className={styles['promo-actions']}>
           <div className={styles['actions-buttons']}>
-            <Button className={styles['actions-button']} icon={<Arrow />} />
-            <Button className={styles['actions-button']} icon={<Arrow />} />
+            <Button
+              className={styles['actions-button']}
+              icon={<Arrow />}
+              animate={false}
+            />
+            <Button
+              className={styles['actions-button']}
+              icon={<Arrow />}
+              animate={false}
+            />
           </div>
           <div className={styles['promo-pages']}>
             <p className={styles['promo-page']}>01</p>

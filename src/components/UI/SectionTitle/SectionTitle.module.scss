@@ -3,4 +3,16 @@
   font-weight: 300;
   line-height: 100%;
   color: #bdbdbd;
+
+  @media screen and (max-width: 870px) {
+    font-size: 52px;
+  }
+
+  @media screen and (max-width: 570px) {
+    text-align: center;
+  }
+
+  @media screen and (max-width: 450px) {
+    font-size: 38px;
+  }
 }

@@ -52,12 +52,26 @@
     }
   }
 
-  .form-button {
+  &-button {
     margin-top: 21px;
     background-color: #333;
 
     p {
       color: #fff;
+    }
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .form {
+    .fields {
+      .field {
+        width: 100%;
+      }
+    }
+
+    &-button {
+      width: 100%;
     }
   }
 }

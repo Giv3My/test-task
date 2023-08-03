@@ -8,6 +8,7 @@ import styles from './Header.module.scss';
 
 export const Header: React.FC = () => {
   const [isScrolled, setIsScrolled] = React.useState(false);
+  const [isMenuActive, setIsMenuActive] = React.useState(false);
 
   React.useEffect(() => {
     const handleScroll = () => {
@@ -23,6 +24,10 @@ export const Header: React.FC = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  const toggleMenu = () => {
+    setIsMenuActive((prev) => !prev);
+  };
+
   return (
     <header
       className={clsx(styles.header, {
@@ -35,7 +40,11 @@ export const Header: React.FC = () => {
             <Logo />
           </a>
         </div>
-        <div className={styles.navbar}>
+        <nav
+          className={clsx(styles.navbar, {
+            [styles.active]: isMenuActive,
+          })}
+        >
           <ul className={styles['nav-items']}>
             {menuItems.map((menuItem, index) => (
               <a key={index} href={menuItem.href}>
@@ -43,6 +52,14 @@ export const Header: React.FC = () => {
               </a>
             ))}
           </ul>
+        </nav>
+        <div
+          className={clsx(styles.menu, {
+            [styles.active]: isMenuActive,
+          })}
+          onClick={toggleMenu}
+        >
+          <span className={styles['menu-icon']} />
         </div>
       </div>
     </header>
