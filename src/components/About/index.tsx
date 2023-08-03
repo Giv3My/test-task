@@ -11,9 +11,21 @@ export const About: React.FC = () => {
   return (
     <section className={styles['about-section']}>
       <div className={styles.images}>
-        <img src={about_1} alt="about_1" />
-        <img src={about_2} alt="about_2" />
-        <img src={about_3} alt="about_3" />
+        <img
+          className="animate__animated wow animate__fadeInDown"
+          src={about_1}
+          alt="about_1"
+        />
+        <img
+          className="animate__animated wow animate__fadeInDown animate__delay-0.5s"
+          src={about_2}
+          alt="about_2"
+        />
+        <img
+          className="animate__animated wow animate__fadeInDown animate__delay-0.5s"
+          src={about_3}
+          alt="about_3"
+        />
       </div>
       <div className={styles.about}>
         <SectionTitle>О компании</SectionTitle>

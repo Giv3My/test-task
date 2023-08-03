@@ -1,4 +1,5 @@
 import React from 'react';
+import clsx from 'clsx';
 
 import { projectImages } from './data';
 
@@ -12,7 +13,10 @@ export const Projects: React.FC = () => {
       <SectionTitle>Наши проекты</SectionTitle>
       <div className={styles.projects}>
         {projectImages.map((img, index) => (
-          <div key={index} className={styles.project}>
+          <div
+            key={index}
+            className={clsx(styles.project, 'animate__animated wow animate__fadeInLeft')}
+          >
             <img src={img} alt={`project_${index + 1}`} />
             {index === 0 && (
               <div className={styles.details}>

@@ -40,7 +40,13 @@ export const ConnectForm: React.FC = () => {
   };
 
   return (
-    <form className={styles.form} onSubmit={handleSubmit(onSubmit)}>
+    <form
+      className={clsx(
+        styles.form,
+        'animate__animated wow animate__fadeIn animate__delay-1s'
+      )}
+      onSubmit={handleSubmit(onSubmit)}
+    >
       <div className={styles.fields}>
         <FormField
           fieldType="input"

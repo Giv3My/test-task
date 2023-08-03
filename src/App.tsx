@@ -1,8 +1,11 @@
-import { Header, Promo, About, Tasks, Projects, Connect, Footer } from '@/components';
+import { useWow } from './hooks';
 
+import { Header, Promo, About, Tasks, Projects, Connect, Footer } from '@/components';
 import styles from './styles/App.module.scss';
 
 function App() {
+  useWow();
+
   return (
     <>
       <Header />

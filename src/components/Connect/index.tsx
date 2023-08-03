@@ -1,4 +1,5 @@
 import React from 'react';
+import clsx from 'clsx';
 
 import { ConnectForm } from './ConnectForm';
 import { SectionTitle } from '../UI';
@@ -11,7 +12,12 @@ export const Connect: React.FC = () => {
       <SectionTitle>Связаться с нами</SectionTitle>
       <div>
         <ConnectForm />
-        <div className={styles['connect-img']}>
+        <div
+          className={clsx(
+            styles['connect-img'],
+            'animate__animated wow animate__fadeIn animate__delay-1s'
+          )}
+        >
           <img src={connectImg} alt="connect-img" />
         </div>
       </div>
